@@ -49,11 +49,11 @@ jobs:
         with:
           command: build
           args: --verbose --target x86_64-apple-darwin
-      name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: macos_build
-        path: target/debug
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: macos_build
+          path: target/debug
   win_gnu_build:
     name: Windows GNU Build
     runs-on: ubuntu-latest
