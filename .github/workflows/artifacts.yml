@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: macos_build
-          path: target/release
+          path: target/release/rust-autoclicker
   win_gnu_build:
     name: Windows GNU Build
     runs-on: ubuntu-latest
