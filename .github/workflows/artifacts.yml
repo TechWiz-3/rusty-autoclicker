@@ -1,9 +1,10 @@
-on:
-  push:
-    paths: "**.rs"
-  pull_request:
-    paths: "**.rs"
-  workflow_dispatch:
+on: [push]
+# add this back later:
+#    push:
+#    paths: "**.rs"
+#  pull_request:
+#    paths: "**.rs"
+#  workflow_dispatch:
 
 name: Build Binaries [Artifacts]
 
