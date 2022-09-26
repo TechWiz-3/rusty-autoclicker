@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: linux_build
-          path: target/x86_64-unkown-linux-gnu/release
+          path: target/x86_64-unknown-linux-gnu/release
 
   apple_darwin_build:
     name: Apple Darwin Build
