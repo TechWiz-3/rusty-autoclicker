@@ -47,6 +47,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - name: check
+        shell: bash
+        run: ls -R
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -56,11 +59,14 @@ jobs:
         with:
           command: build
           args: --release --verbose --target x86_64-apple-darwin
+      - name: check
+        shell: bash
+        run: ls -R
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: macos_build
-          path: target/release/rust-autoclicker
+          path: target/release/rusty-autoclicker
   win_gnu_build:
     name: Windows GNU Build
     runs-on: ubuntu-latest
