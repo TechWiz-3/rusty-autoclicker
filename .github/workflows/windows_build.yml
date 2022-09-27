@@ -29,4 +29,9 @@ jobs:
         with:
           use-cross: true
           command: build
-          args: --verbose --target x86_64-pc-windows-gnu
+          args: --release --verbose --target x86_64-pc-windows-gnu
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: windows_build
+          path: target/x86_64-pc-windows-gnu/release/rusty-autoclicker.exe

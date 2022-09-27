@@ -34,4 +34,10 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --verbose --target x86_64-unknown-linux-gnu
+          args: --release --verbose --target x86_64-unknown-linux-gnu
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rusty_autoclicker_linux
+          path: target/x86_64-unknown-linux-gnu/release/rusty-autoclicker
+
