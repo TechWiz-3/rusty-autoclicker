@@ -33,5 +33,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: windows_build
+          name: rusty_autoclicker_windows
           path: target/x86_64-pc-windows-gnu/release/rusty-autoclicker.exe

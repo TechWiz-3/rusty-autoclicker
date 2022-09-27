@@ -33,6 +33,6 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: macos_build
+          name: rust_autoclicker_macos
           path: target/x86_64-apple-darwin/release/rusty-autoclicker
 
